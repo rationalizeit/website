@@ -190,7 +190,7 @@ $(window).load(function() {
 			
 			$.ajax({
 					type: "POST",
-					url: "process.php",					
+					url: "process",					
 					data: $('#contactform').serialize(),
 					success: function(msg){						
 						$('.form-message').html(msg);
