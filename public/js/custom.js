@@ -218,7 +218,7 @@ $(window).load(function() {
 	$(function() {
 		"use strict";
 		function initialize() {
-			var myLatlng = new google.maps.LatLng(32.608642, -97.119254);
+			var myLatlng = new google.maps.LatLng(33.075166, -96.751817);
 			var mapOptions = {
 				zoom: 8,
 				disableDefaultUI: true,
