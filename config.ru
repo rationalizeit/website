@@ -57,3 +57,16 @@ end
 map "/process" do
   run SendMail
 end
+
+map "/.well-known/acme-challenge/1ovrDar4L1lUYdiyoZPQ1mn0_JMsh0w9jwEJ6Q6IJ_M" do
+  run lambda { |env|
+    [
+      200,
+      {
+      'Content-Type' => 'text/html',
+      'Cache-Control' => 'public, max-age=86400'
+      },
+      "1ovrDar4L1lUYdiyoZPQ1mn0_JMsh0w9jwEJ6Q6IJ_M.b69b_Tpoo_rsoQ32-bX5YuSDUlmO1lxYCzlOvaNBQ90"
+    ]
+  }
+end
