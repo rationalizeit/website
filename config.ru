@@ -24,7 +24,7 @@ class SendMail
 
   def self.send_mail(params, subject='Message from the website')
     puts params
-    mail_body = params['contact_message'] + "\nPhone Number: " + params["contact_number"] + "\n Name: " + params["contact_name"]
+    mail_body = params['contact_message'] + "\nPhone Number: " + params["contact_number"] + "\n Name: " + params["contact_name"] + "\n Email: " + params["contact_email"]
     mail = Mail.new do
       from params['contact_email']
       to 'messages@rationalizeit.us'
@@ -42,7 +42,6 @@ use Rack::Static,
   :root => "public"
 map "/" do
   run lambda { |env|
-
     [
       200,
       {
